@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1736019353 source:g:\c project\studentdb\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1736011229 source:g:\c project\studentdb\sdbapp.c
+	"STD.h"
+	"SDB.h"
+
+1735313597 g:\c project\studentdb\std.h
+
+1736009746 g:\c project\studentdb\sdb.h
+	"STD.h"
+

@@ -3,6 +3,6 @@
 
 int main()
 {
-    printf("Hello world!\n");
+    SDB_APP();
     return 0;
 }
