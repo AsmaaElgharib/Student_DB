@@ -1,17 +1,31 @@
- #include "STD.h"
+#include <stdio.h>
+#include <stdlib.h>
 #include "SDB.h"
 
+// function to start project and receive user's choice
  void SDB_APP()
  {
     uint8 choice;
     do{
-      printf("\n 1. press 1 to add entry \n 2. press 2 To get used size in database\n 3. press 3 To read student data \n 4. press 4 To get the list of all student IDs\n 5. press 5 To check is ID is existed\n 6. press 6 To delete student data\n 7. press 7 To check is database is full\n 8. press 0 To exit enter 0\n");
-      scanf("%d", &choice);
-      SDB_action(choice);
-    }while (choice != 0);
+        // Display options to user
+        printf("\n 1. Press 1 to add entry \n");
+        printf(" 2. Press 2 to get used size in database\n");
+        printf(" 3. Press 3 to read student data \n");
+        printf(" 4. Press 4 to get the list of all student IDs\n");
+        printf(" 5. Press 5 to check if ID exists\n");
+        printf(" 6. Press 6 to delete student data\n");
+        printf(" 7. Press 7 to check if the database is full\n");
+        printf(" 8. Press 0 to exit\n");
+        scanf("%d", &choice);
+        // Call SDB_action function, passing the user's choice to execute db statement
+        SDB_action(choice);
+    }while (choice != 0); //the project continues until the user chose to exit(0)
 
  }
-
+/*
+core of the project for handling user's input for database system
+input of type char (choice) through it the user will be able to execute new db statement
+*/
  void SDB_action (uint8 choice)
 {
     uint32 id, list[MAX_STD];
@@ -23,7 +37,7 @@
         printf("*------------------------------------------------------------*");
         break;
     case 2:
-        printf("used size: %d", SDB_GetUsedSize());
+        printf("used size: %d\n", SDB_GetUsedSize());
         printf("*------------------------------------------------------------*");
         break;
     case 3:
@@ -37,7 +51,7 @@
         printf("students in database with IDs:\n");
         while (i < count)
         {
-            printf("%u", list[i]);
+            printf("%u\t\t", list[i]);
             i++;
         }
         printf("*------------------------------------------------------------*");
@@ -45,7 +59,7 @@
     case 5:
         printf("Enter student id:\n");
         scanf("%u",&id);
-        printf(SDB_IsIdExist(id)? "student with that id exists":"student with that id not found");
+        printf(SDB_IsIdExist(id)? "student with that id exists\n":"student with that id not found\n");
         printf("*------------------------------------------------------------*");
         break;
     case 6:
@@ -55,11 +69,11 @@
         printf("*------------------------------------------------------------*");
         break;
     case 7:
-        printf(SDB_IsFull()? "DataBase is full":"DataBase is not full!, you can add more records now");
+        printf(SDB_IsFull()? "DataBase is full\n":"DataBase is not full!, you can add more records now\n");
         printf("*------------------------------------------------------------*");
         break;
     case 0:
-        printf("Exit Program");
+        printf("Exit Program\n");
         printf("*------------------------------------------------------------*");
         break;
     default:

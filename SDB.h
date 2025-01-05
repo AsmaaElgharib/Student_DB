@@ -1,9 +1,11 @@
 #ifndef SDB_H
 #define SDB_H
 
+#define MAX_STD 10
+#define MIN_STD 3
 
 #include "STD.h"
- #define MAX_STD 10
+
 
 typedef struct SimpleDb
 {
