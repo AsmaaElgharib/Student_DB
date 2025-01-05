@@ -3,8 +3,9 @@
 	<stdio.h>
 	<stdlib.h>
 
-1736011229 source:g:\c project\studentdb\sdbapp.c
-	"STD.h"
+1736107669 source:g:\c project\studentdb\sdbapp.c
+	<stdio.h>
+	<stdlib.h>
 	"SDB.h"
 
 1735313597 g:\c project\studentdb\std.h
@@ -12,7 +13,7 @@
 1736101968 g:\c project\studentdb\sdb.h
 	"STD.h"
 
-1736102832 source:g:\c project\studentdb\sdb.c
+1736106689 source:g:\c project\studentdb\sdb.c
 	<stdio.h>
 	<stdlib.h>
 	"SDB.h"

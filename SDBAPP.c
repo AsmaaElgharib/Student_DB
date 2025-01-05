@@ -5,6 +5,10 @@
 // function to start project and receive user's choice
  void SDB_APP()
  {
+     printf("*--------------------------------------------------------*\n");
+     printf("* Note: max length of database is 10 and min length is 3 *\n");
+     printf("*--------------------------------------------------------*\n");
+
     uint8 choice;
     do{
         // Display options to user
@@ -26,7 +30,7 @@
 core of the project for handling user's input for database system
 input of type char (choice) through it the user will be able to execute new db statement
 */
- void SDB_action (uint8 choice)
+void SDB_action (uint8 choice)
 {
     uint32 id, list[MAX_STD];
     uint8 count, i = 0;
@@ -54,7 +58,7 @@ input of type char (choice) through it the user will be able to execute new db s
             printf("%u\t\t", list[i]);
             i++;
         }
-        printf("*------------------------------------------------------------*");
+        printf("\n*------------------------------------------------------------*");
         break;
     case 5:
         printf("Enter student id:\n");
